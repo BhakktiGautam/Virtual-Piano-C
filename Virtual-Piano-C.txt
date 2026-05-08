@@ -1,0 +1,100 @@
+#include<stdio.h>
+#include<conio.h>
+#include<windows.h>
+void display_piano(){
+	printf("\n==========WELCOME TO VIRTUAL PIANO==========\n");
+	printf("Normal Octave: A S D F G H J\n");
+	printf("               C D E F G A B\n\n");
+	printf("Lower Octave:  Z X C V B N M\n");
+	printf("               C D E F G A B\n\n");
+	printf("Press Q to quit\n");
+	printf("===============================================\n");
+}
+int main(){
+char user_key;
+display_piano();
+while(1){
+	user_key=getch();
+	if(user_key=='A'||user_key=='a')
+	{
+		Beep(261,300);
+		printf("Playing C\n");
+	}
+	else if(user_key=='S'||user_key=='s'){
+			Beep(294,300);
+		printf("Playing D\n");
+	}
+	else if(user_key=='D'||user_key=='d')
+	{
+			Beep(329,300);
+		printf("Playing E\n");
+	}
+	else if(user_key=='F'||user_key=='f')
+	{
+			Beep(349,300);
+		printf("Playing F\n");
+	}
+	else if(user_key=='G'||user_key=='g')
+	{
+		Beep(392,300);
+		printf("Playing G\n");
+	}
+	else if(user_key=='H'||user_key=='h')
+	{
+		Beep(440,300);
+		printf("Playing A\n");
+	}
+	else if(user_key=='J'||user_key=='j')
+	{
+		Beep(493,300);
+		printf("Playing B\n");
+	}
+	else if(user_key=='Z'||user_key=='z')
+	{
+		Beep(130,300);
+		printf("Playing Lower C\n");
+	}
+	else if(user_key=='X'||user_key=='x')
+	{
+		Beep(146,300);
+		printf("Playing Lower D\n");
+	}
+	else if(user_key=='C'||user_key=='c')
+	{
+		Beep(164,300);
+		printf("Playing Lower E\n");
+	}
+	else if(user_key=='V'||user_key=='v')
+	{
+		Beep(174,300);
+		printf("Playing Lower F\n");
+	}
+	else if(user_key=='B'||user_key=='b')
+	{
+		Beep(196,300);
+		printf("Playing Lower G\n");
+	}
+	else if(user_key=='N'||user_key=='n')
+	{
+		Beep(220,300);
+		printf("Playing Lower A\n");
+	}
+	else if(user_key=='M'||user_key=='m')
+	{
+		Beep(246,300);
+		printf("Playing Lower B\n");
+	}
+	else if(user_key=='Q'||user_key=='q'){
+		printf("Virtual piano stopped\n");
+		break;
+	}
+	else{
+		printf("Invalid Key\n");
+	}
+	}
+return 0;
+}
+
+
+
+
